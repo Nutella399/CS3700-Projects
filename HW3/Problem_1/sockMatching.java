@@ -2,7 +2,7 @@ public class sockMatching{
   
   public static void main(String[] args) {
    Sock sock = new Sock(); 
-   Matches match = new Matches(); 
+   Sock match = new Sock(); 
    
    Thread red = new Thread(new colorThread("Red", sock));
    Thread green = new Thread(new colorThread("Green", sock));

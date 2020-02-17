@@ -1,15 +1,15 @@
 public class washerThread implements Runnable{
   
-  Matches match; 
+  Sock sock; 
   
-  public washerThread(Matches match) {
-    this.match = match; 
+  public washerThread(Sock sock) {
+    this.sock = sock; 
   }
   
   public void run() {
-    String message = match.take();
+    String message = sock.take();
     while(true) {
-      message = match.take();
+      message = sock.take();
       if(message.equals("Done")) {
         break; 
       }

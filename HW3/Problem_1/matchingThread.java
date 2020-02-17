@@ -5,8 +5,8 @@ import java.util.HashMap;
 public class matchingThread implements Runnable{
   
   Sock sock; 
-  Matches match;
-  public matchingThread(Sock sock, Matches match) {
+  Sock match;
+  public matchingThread(Sock sock, Sock match) {
     this.sock = sock;
     this.match = match; 
   }
