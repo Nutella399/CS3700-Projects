@@ -20,13 +20,11 @@ public class officialThread implements Runnable{
     Random rand = new Random();
     char leaderName = name;
     int rank = rand.nextInt();
-    
     try{
       Thread.sleep(1000); 
     }catch(InterruptedException e) {
     
     }
-    
     synchronized(lock1){
       
       System.out.println("My name is: " + name + " my rank is: " + rank + 
@@ -35,9 +33,6 @@ public class officialThread implements Runnable{
       rankt.add(name, rank); 
       rankThread.interrupt();
     }
-    
-    
-    
     while(true){
       synchronized(lock2){  
         try {
